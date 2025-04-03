@@ -51,3 +51,47 @@ class DoublyLinkedList:
 
     def extend(self, other: "DoublyLinkedList") -> None:
         self._data.extend(other._data)
+
+if __name__ == "__main__":
+    dll = DoublyLinkedList()
+
+    dll.append("A")
+    dll.append("B")
+    dll.append("C")
+    print(dll._data)
+
+    dll.insert("X", 1)
+    print(dll._data)
+
+    deleted = dll.delete(2)
+    print(deleted)
+    print(dll._data)
+
+    dll.delete_all("X")
+    print(dll._data)
+
+    print(dll.get(1))
+
+    cloned_dll = dll.clone()
+    print(cloned_dll._data)
+
+    dll.reverse()
+    print(dll._data)
+
+    print(dll.find_first("A"))
+
+    print(dll.find_last("A"))
+
+    dll.clear()
+    print(dll._data)
+
+    dll.append("D")
+    dll.append("E")
+
+    other_dll = DoublyLinkedList()
+    other_dll.append("F")
+    other_dll.append("G")
+
+    dll.extend(other_dll)
+    print(dll._data)
+
