@@ -31,6 +31,7 @@ class DoublyLinkedList:
             if self.tail:
                 self.tail.next = None
         else:
+            node.prev.next = node.next
             node.next.prev = node.prev
         self._length -= 1
     def length(self):
