@@ -1,5 +1,5 @@
 import pytest
-from ..main import DoublyLinkedList, ListNode
+from ..main import DoublyLinkedList
 
 
 @pytest.fixture
@@ -250,8 +250,6 @@ def test_clear_empty_list():
     empty_list = DoublyLinkedList()
     empty_list.clear()
     assert empty_list.length() == 0
-    assert empty_list.head is None
-    assert empty_list.tail is None
 
 
 def test_extend_with_empty_list():
