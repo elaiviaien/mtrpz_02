@@ -58,32 +58,32 @@ if __name__ == "__main__":
     dll.append("A")
     dll.append("B")
     dll.append("C")
-    print(dll._data)
+    print("After append:", dll._data)
 
     dll.insert("X", 1)
-    print(dll._data)
+    print("After insert:", dll._data)
 
     deleted = dll.delete(2)
-    print(deleted)
-    print(dll._data)
+    print("Deleted element:", deleted)
+    print("After delete:", dll._data)
 
     dll.delete_all("X")
-    print(dll._data)
+    print("After delete_all:", dll._data)
 
-    print(dll.get(1))
+    print("Element at index 1:", dll.get(1))
 
     cloned_dll = dll.clone()
-    print(cloned_dll._data)
+    print("Cloned list:", cloned_dll._data)
 
     dll.reverse()
-    print(dll._data)
+    print("After reverse:", dll._data)
 
-    print(dll.find_first("A"))
+    print("First occurrence of 'A':", dll.find_first("A"))
 
-    print(dll.find_last("A"))
+    print("Last occurrence of 'A':", dll.find_last("A"))
 
     dll.clear()
-    print(dll._data)
+    print("After clear:", dll._data)
 
     dll.append("D")
     dll.append("E")
@@ -93,5 +93,5 @@ if __name__ == "__main__":
     other_dll.append("G")
 
     dll.extend(other_dll)
-    print(dll._data)
+    print("After extend:", dll._data)
 
