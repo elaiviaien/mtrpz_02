@@ -82,7 +82,7 @@ class DoublyLinkedList:
     def delete_all(self, element: str) -> None:
         current = self.head
         while current:
-            next_node = current.next  # Save the next node
+            next_node = current.next
             if current.data == element:
                 self._delete_node(current)
             current = next_node
